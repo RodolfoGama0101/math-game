@@ -5,24 +5,41 @@
     box-sizing: border-box;
 }
 
-/* Alinha o select no canto superior direito */
+/* Estilos para o status no canto superior esquerdo */
+#status {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px; /* Espaçamento entre os elementos */
+}
+
+#status p {
+    background-color: #333; /* Cor de fundo */
+    color: white;           /* Cor do texto */
+    padding: 5px 10px;      /* Espaçamento interno */
+    font-size: 1rem;        /* Tamanho da fonte */
+    border-radius: 5px;     /* Bordas arredondadas */
+}
+
+/* Estilos para os selects no canto superior direito */
 #qtd, #operation {
     position: absolute;
-    top: 20px;   /* Distância do topo */
-    background-color: #333;  /* Cor de fundo para o select */
-    color: white;  /* Cor da fonte */
-    border: none;  /* Remove a borda */
-    padding: 5px 10px;  /* Espaciamento interno */
-    font-size: 1rem;  /* Tamanho da fonte */
-    border-radius: 5px;  /* Bordas arredondadas */
+    top: 20px;
+    background-color: #333;  /* Cor de fundo */
+    color: white;            /* Cor do texto */
+    border: none;            /* Remove a borda */
+    padding: 5px 10px;       /* Espaçamento interno */
+    font-size: 1rem;         /* Tamanho da fonte */
+    border-radius: 5px;      /* Bordas arredondadas */
 }
 
 #qtd {
-    right: 20px; /* Distância da borda direita */
+    right: 20px;
 }
 
 #operation {
-    right: 120px; /* Um pouco à esquerda do campo 'qtd' */
+    right: 120px;
 }
 
 body {
@@ -33,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Necessário para o posicionamento absoluto do select */
+    position: relative;
 }
 
 .container {
@@ -45,9 +62,7 @@ body {
     width: 40%;
     padding: 20px;
     border-radius: 28px;
-    background: #202020;
-    box-shadow: 27px 27px 52px #191919,
-        -27px -27px 52px #272727;
+    box-shadow: 27px 27px 52px #191919, -27px -27px 52px #272727;
 }
 
 .title-game {
@@ -64,19 +79,25 @@ body {
     align-items: center;
 }
 
+/* Estilização do input */
+.input-answer {
+    margin: 0 10px;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    font-size: 1rem;
+    border: 0px solid #ffffff; /* Borda verde */
+    border-radius: 5px;        /* Bordas arredondadas */
+    background-color: #303030; /* Cor de fundo */
+    color: white;
+}
+
 .btn-verify,
 .btn-new-question,
 #question {
     margin: 5px;
     padding: 10px;
     font-size: 1rem;
-}
-
-.input-answer {
-    margin: 0;
-    width: 60px;
-    height: 30px;
-    text-align: center;
 }
 
 .btn-verify,
