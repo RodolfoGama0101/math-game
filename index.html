@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <div id="status">
-        <p id="class">Classe: Iniciante</p>
-        <p id="points">Pontos: 0</p> <!-- Exibição dos pontos ao lado da classe -->
-    </div>
+    <button id="theme-toggle" onclick="toggleTheme()">Modo Claro</button> <!-- Botão de troca de tema -->
 
     <select name="operation" id="operation" onchange="newRandomNum(), updateTitle()">
         <option value="add">Adição</option>
@@ -36,9 +33,26 @@
         <button type="button" class="btn-verify" onclick="verify()">Verificar</button>
         <button type="button" class="btn-new-question" onclick="newRandomNum()">Nova pergunta</button>
         <p id="correct"></p>
+        <div id="status">
+            <p id="class">Classe: Iniciante</p>
+            <p id="points">Pontos: 0</p>
+        </div>
     </div>
 
     <script src="app.js"></script>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.getElementById('theme-toggle');
+            body.classList.toggle('light-theme');
+            
+            if (body.classList.contains('light-theme')) {
+                themeToggle.textContent = 'Modo Escuro';
+            } else {
+                themeToggle.textContent = 'Modo Claro';
+            }
+        }
+    </script>
 </body>
 
 </html>
